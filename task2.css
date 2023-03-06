@@ -87,6 +87,11 @@ td {
   width: 10%;
 }
 
+.row th {
+  height: 0;
+  width: 0;
+}
+
 th {
   padding: 5px 15px 5px 15px;
   text-align: center;
