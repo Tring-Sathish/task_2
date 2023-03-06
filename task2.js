@@ -13,7 +13,7 @@ let details = [
     email: "cde@gmail.com",
     firstname: "fghij",
     lastname: "qrstr",
-    phoneno: 0987654321,
+    phoneno: 1987654321,
     dob: "02-01-2001",
     gender: "Female",
   },
@@ -36,7 +36,7 @@ function addData() {
   if (document.getElementById("terms").checked) {
     
     if (document.getElementById("id").value != "") {
-      var index = details.findIndex((l) => l.id == document.getElementById("id").value);
+      let index = details.findIndex((l) => l.id == document.getElementById("id").value);
       console.log(index);
       details[index].id = document.getElementById("id").value;
       details[index].email = document.getElementById("email").value;
@@ -86,7 +86,7 @@ function addData() {
 let i = 0;
 
 function showData() {
-  var table = document.getElementById("regtable");
+  let table = document.getElementById("regtable");
   for (; i < details.length; i++) {
     let row = table.insertRow();
     let idcell = row.insertCell(0);
@@ -115,14 +115,14 @@ function showData() {
 showData();
 
 function remove(id) {
-  var index = details.findIndex((l) => l.id == id);
+  let index = details.findIndex((l) => l.id == id);
   details.splice(index, 1);
   localStorage.setItem("Data", JSON.stringify(details));
   document.getElementById("regtable").deleteRow(index);
 }
 
 function editData(id) {
-  var index = details.findIndex((l) => l.id == id);
+  let index = details.findIndex((l) => l.id == id);
   document.getElementById("id").value = details[index].id;
   document.getElementById("email").value = details[index].email;
   document.getElementById("fname").value = details[index].firstname;
