@@ -110,7 +110,7 @@ th {
       border: none;
   }
 
-  .table, .table td, .table td {
+  .table, .table td {
     display: block;
     width: auto;
   }
